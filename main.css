@@ -14,7 +14,7 @@
 
 	/* Font Size */
 	--hero-fs: 270px;
-	--heading-fs: 150px;
+	--heading-fs: 125px;
 	--body-fs: 20px;
 	--label-fs: 13px;
 
@@ -39,6 +39,7 @@ body{
 .small-label{
 	color: var(--dark-gray);
 	font-size: var(--label-fs);
+	font-family: monospace;
 }
 
 /* Nav */
@@ -49,6 +50,7 @@ body{
 	justify-content: space-between;
 	padding: var(--small-space);
 	background: var(--void-black);
+	font-family: monospace;
 }
 
 .logo{
@@ -97,7 +99,6 @@ body{
 	position: relative;
 	background: var(--void-black);
 	padding: var(--section-space);
-	height: 100vh;
 }
 
 /* Badge */
@@ -120,9 +121,13 @@ body{
 /* Title */
 .hero h1{
 	color: var(--bone);
-	font-size: var(--heading-fs);
+	font-size: 210px;
+	white-space: nowrap;
 	font-weight: 900;
 	position: relative;
+	font-family: "Barlow Condensed", sans-serif;
+	line-height: .9;
+	margin-bottom: var(--large-space)
 }
 
 .hero em{
@@ -142,6 +147,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: start;
+	z-index: 1;
 }
 
 
@@ -176,12 +182,70 @@ body{
 }
 
 .statement h2{
-	font-size: 4.5rem;
+	font-size: var(--heading-fs);
 	font-weight: 900;
-	line-height: var(--large-space);
+	line-height: 1;
 	padding-bottom: var(--medium-space);
+	font-family: "Barlow Condensed", sans-serif;
 }
 
 .statement p{
 	color: var(--raw-silver);
+}
+
+/* ===== PRODUCTS ===== */
+.products{
+	background-color: var(--void-black);
+	padding: var(--section-space);
+	color: green;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.products h2{
+	font-size: 75px;
+	color: var(--dark-gray);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.product__container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.products p:nth-child(2),
+.products p:nth-child(3){
+	text-align: end;
+}
+
+.product__container p{
+	display: flex;
+	flex-direction: column;
+}
+
+.product__container span{
+	color: var(--raw-silver);
+	margin-bottom: var(--small-space);
+	font-size: var(--label-fs);
+}
+
+.product__container strong{
+	color: var(--acid-lime);
+	position: relative;
+	font-size: var(--label-fs);
+}
+
+.product__container strong::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: .1px;
+	background: var(--acid-lime);
+	bottom: -5px;
+	border-radius: 99px;
 }
