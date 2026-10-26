@@ -7,10 +7,10 @@
 :root{
 	/* Colors */
 	--void-black: #080808;
-	--bone: #F0EFE7;
-	--acid-lime: #C8FF00;
-	--raw-silver: #AAAAAA;
-	--dark-gray: #292929;
+	--bone: #f0efe7;
+	--acid-lime: #c8ff00;
+	--raw-silver: #aaaaaa;
+	--dark-grey: #292929;
 
 	/* Font Size */
 	--hero-fs: 270px;
@@ -25,7 +25,7 @@
 	--section-space: 7.5rem;
 
 	/* Divider */
-	--divider: 1px solid var(--dark-gray);
+	--divider: 1px solid var(--dark-grey);
 
 	/* Padding */
 	--btn-pd: 1.5rem;
@@ -35,9 +35,16 @@ body{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
 /* Global Settings */
 .small-label{
-	color: var(--dark-gray);
+	color: var(--dark-grey);
 	font-size: var(--label-fs);
 	font-family: monospace;
 }
@@ -207,7 +214,7 @@ body{
 
 .products h2{
 	font-size: 75px;
-	color: var(--dark-gray);
+	color: var(--dark-grey);
 	font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -248,4 +255,71 @@ body{
 	background: var(--acid-lime);
 	bottom: -5px;
 	border-radius: 99px;
+}
+
+/* ===== Sound Section ===== */
+.sound{
+	background: var(--void-black);
+	padding: var(--section-space);
+	color: white;
+}
+
+.sound__title{
+	color: var(--raw-silver);
+	padding: var(--large-space) 0;
+	border-top: 1px solid var(--dark-grey);
+	border-bottom: 1px solid var(--dark-grey);
+	font-size: var(--label-fs);
+	font-weight: 500;
+}
+
+.sound__article{
+	display: grid;
+	grid-template-columns: 6.5rem 30rem 1fr; /* Kolom 1: nummer, Kolom 2: titel, Kolom 3: beschrijving */
+	align-items: baseline;
+	padding: var(--medium-space) 0;
+	border-bottom: 1px solid var(--dark-grey);
+}
+
+.sound__span{
+	color: var(--raw-silver);
+}
+
+.sound__sub-title{
+	color: var(--bone);
+}
+
+.sound__text{
+	color: var(--dark-grey);
+}
+
+/* ===== Listen ===== */
+.listen{
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/headphones3.avif');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 90vh;
+	padding: var(--section-space);
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: end;
+	text-align: end;
+}
+
+.listen h2{
+	font-size: 6rem;
+	line-height: .9;
+	color: var(--bone);
+}
+
+.listen span{
+	color: var(--acid-lime);
+}
+
+.listen p{
+	color: var(--raw-silver);
+	font-size: var(--label-fs);
+	margin-top: var(--small-space);
 }
