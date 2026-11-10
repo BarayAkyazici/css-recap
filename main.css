@@ -323,3 +323,206 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('
 	font-size: var(--label-fs);
 	margin-top: var(--small-space);
 }
+
+/* ===== Hours ===== */
+.hours{
+	padding: var(--section-space);
+	background: var(--bone);
+}
+
+/* Title */
+.hours h2{
+	font-weight: 900;
+	font-size: var(--heading-fs);
+	line-height: .9;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Containers */
+.hours__container{
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	gap: var(--medium-space);
+	margin-top: var(--medium-space);
+}
+
+.hours__container article:nth-child(2){
+	border-left: 1px solid var(--raw-silver);
+	border-right: 1px solid var(--raw-silver);
+	padding: 0 var(--medium-space);
+}
+
+.hours__container h3, 
+.hours__container span{
+	color: var(--raw-silver);
+	font-size: var(--label-fs);
+	font-family: monospace;
+}
+
+.hours__container p{
+	color: var(--void-black);
+	font-weight: 700;
+	margin: .25rem 0;
+}
+
+/* ===== Shop ===== */
+.shop{
+	padding: var(--section-space);
+	background: black;
+	color: var(--raw-silver);
+}
+
+.shop h2{
+	margin-bottom: var(--medium-space);
+	font-size: var(--label-fs);
+	font-weight: 500;
+	font-family: monospace;
+}
+
+.shop__container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.shop__container article{
+	border: 1px solid var(--raw-silver);
+	padding: var(--large-space) var(--small-space);
+}
+
+.shop__container article p:first-of-type{
+	color: var(--dark-grey);
+	font-size: var(--label-fs);
+	font-family: monospace;
+	margin-bottom: var(--medium-space);
+}
+
+.shop__container h3{
+	font-weight: 900;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 2rem;
+	margin-bottom: .5rem;
+}
+
+.shop__container article:nth-child(1){
+	background: var(--void-black);
+}
+
+
+.shop__container article:nth-child(2){
+	background: var(--raw-silver);
+}
+
+.shop__container article:nth-child(2) h3,
+.shop__container article:nth-child(3) h3{
+	color: black;
+}
+
+.shop__container article:nth-child(2) p:last-child,
+.shop__container article:nth-child(3) p:last-child{
+	color: var(--dark-grey);
+}
+
+.shop__container article:nth-child(1) p:first-of-type{
+	color: var(--raw-silver);
+}
+
+.shop__container article:nth-child(3){
+	background: var(--bone);
+}
+
+/* ===== Last Section ===== */
+.last{
+	position: relative;
+	padding: var(--section-space);
+	min-height: 600px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("assets/headphones2.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.last p:first-child{
+	color: var(--acid-lime);
+	font-size: var(--heading-fs);
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+	opacity: .1;
+
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 900;
+	white-space: nowrap;
+}
+
+.last h2{
+	margin-bottom: var(--medium-space);
+	color: var(--bone);
+	font-size: var(--heading-fs);
+	line-height: .9;
+	font-weight: 900;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.last div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--small-space);
+}
+
+
+.last div > a{
+	background-color: var(--acid-lime);
+	padding: var(--small-space);
+	text-decoration: none;
+	color: var(--void-black);
+	font-weight: 700;
+}
+
+.last div > p{
+	color: var(--raw-silver);
+	font-size: var(--label-fs);
+}
+
+/* ===== Footer ===== */
+.footer{
+	background-color: var(--void-black);
+	padding: var(--medium-space);
+	border-top: 1px solid var(--dark-grey);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer a{
+	color: var(--bone);
+	text-decoration: none;
+}
+
+.footer .first{
+	font-weight: 800;
+}
+
+.footer p{
+	color: var(--dark-grey);
+}
+
+.footer nav{
+	display: flex;
+	flex-direction: row;
+	gap: var(--small-space);
+	font-size: var(--label-fs);
+}
+
+.footer nav a{
+	color: var(--raw-silver);
+}
